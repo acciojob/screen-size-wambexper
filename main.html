@@ -1,16 +1,32 @@
 <!DOCTYPE html>
- 
 <html>
- 
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <title>Screen Size</title>
 </head>
- 
-<body>  <div id="sizeInfo"><h1></h1></div>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
- 
+<body>
+  <div id="sizeInfo">
+    <h1>Width: <span id="width"></span> Height: <span id="height"></span></h1>
+  </div>
+
+  <script>
+    const sizeInfo = document.getElementById("sizeInfo");
+    const widthSpan = document.getElementById("width");
+    const heightSpan = document.getElementById("height");
+
+    // Function to update the width and height in the <h1> tag
+    function updateWindowSize() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      widthSpan.textContent = width;
+      heightSpan.textContent = height;
+    }
+
+    // Initial call to set the initial window size
+    updateWindowSize();
+
+    // Add a resize event listener to update the size on window resize
+    window.addEventListener("resize", updateWindowSize);
+  </script>
 </body>
- 
 </html>
