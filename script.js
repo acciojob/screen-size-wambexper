@@ -1,15 +1,10 @@
 //your JS code here. If required.
-let height=this.innerHeight;
-    let width=this.innerWidth;
-   let div=document.getElementById("sizeInfo");
-    let h=div.firstChild;
-    h.innerText="Width: "+width+" and Height: "+height;  
-window.addEventListener("resize",function(){
-    let height=this.innerHeight;
-    let width=this.innerWidth;
-   let div=document.getElementById("sizeInfo");
-    let h=div.firstChild;
- 
-    h.innerText="Width: "+width+" and Height: "+height; 
-  
-  })
+//your JS code here. If required.
+let a = document.getElementById("sizeInfo");
+function showhw() {
+	let x = window.innerWidth;
+	let y = window.innerHeight;
+	a.innerHTML = "Width: " + x + " and Height: " + y;
+}
+showhw();
+window.addEventListener('resize', showhw);
