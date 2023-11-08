@@ -1,10 +1,15 @@
-   //your JS code here. If required.
-let heading = document.querySelector("h1");
-function onResize(){
-    let width = window.innerWidth;
-let height = window.innerHeight;
-heading.innerText = `Width: ${width} and Height: ${height}`;
-}
-onResize();
-
-window.addEventListener("resize", onResize);
+//your JS code here. If required.
+let height=this.innerHeight;
+    let width=this.innerWidth;
+   let div=document.getElementById("sizeInfo");
+    let h=div.firstChild;
+    h.innerText="Width: "+width+" and Height: "+height;  
+window.addEventListener("resize",function(){
+    let height=this.innerHeight;
+    let width=this.innerWidth;
+   let div=document.getElementById("sizeInfo");
+    let h=div.firstChild;
+ 
+    h.innerText="Width: "+width+" and Height: "+height; 
+  
+  })
